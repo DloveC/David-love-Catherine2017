@@ -245,14 +245,15 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/count-time.js"></script>
+    <script type="text/javascript" src="jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="count-time.js"></script>
     <script>
     $(function() {
         //设置起始日期
         countTime('2016/11/14 00:05', 'day', 'hour', 'minute', 'second');
         var days = $('#day').text();
+        
         // 设置标题
         if (parseInt(days / 365) != 0) {
             $(document).attr("title", "在一起" + parseInt(days / 365) + "年,感谢相伴。");
@@ -260,6 +261,7 @@
             $(document).attr("title", "在一起" + parseInt(days / 30) + "个月,感谢相伴。");
         } else
             $(document).attr("title", "在一起" + days + "天,感谢相伴。");
+
         //设置每一张图片对应的文字
         var says = new Array(
             "一路相伴,感谢有你",
